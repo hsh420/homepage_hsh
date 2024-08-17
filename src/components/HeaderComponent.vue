@@ -1,10 +1,14 @@
+<script lang="ts" setup>
+import AtomAnimationComponent from './AtomAnimationComponent.vue'
+</script>
+
 <template>
   <header>
-    <div class="wrapper">
-      <div>ATOM</div>
+    <div class="head__wrapper">
+      <AtomAnimationComponent />
       <div>
-        <h2>Hendrik Schwind-Hansen</h2>
-        <h3>Web-Development 🚀</h3>
+        <h2 class="head__title">H. Schwind-Hansen</h2>
+        <h3 class="head__subtitle">Web-Development 🚀</h3>
       </div>
       <div>MENU</div>
     </div>
@@ -12,9 +16,18 @@
 </template>
 
 <style scoped>
-.wrapper {
+header {
+  height: 140px;
+}
+.head__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
+  align-items: center;
+}
+.head__title {
+  width: 155px;
+}
+.head__subtitle {
+  text-align: center;
 }
 </style>
