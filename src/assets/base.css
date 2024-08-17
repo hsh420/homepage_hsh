@@ -20,12 +20,16 @@
 :root {
   --color-background: var(--background);
   --color-text: var(--primary);
+  --color-accent: var(--accent);
+  --color-warn: var(--warn);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--background-dark);
     --color-text: var(--primary-dark);
+    --color-accent: var(--accent-dark);
+    --color-warn: var(--warn-dark);
   }
 }
 
@@ -46,12 +50,9 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
   line-height: 1.6;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
