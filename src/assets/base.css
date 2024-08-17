@@ -20,6 +20,7 @@
 :root {
   --color-background: var(--background);
   --color-text: var(--primary);
+  --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-warn: var(--warn);
 }
@@ -28,6 +29,7 @@
   :root {
     --color-background: var(--background-dark);
     --color-text: var(--primary-dark);
+    --color-secondary: var(--secondary-dark);
     --color-accent: var(--accent-dark);
     --color-warn: var(--warn-dark);
   }

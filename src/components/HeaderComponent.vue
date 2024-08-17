@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import AtomAnimationComponent from './AtomAnimationComponent.vue'
+import '@/assets/base.css'
 </script>
 
 <template>
@@ -17,7 +18,13 @@ import AtomAnimationComponent from './AtomAnimationComponent.vue'
 
 <style scoped>
 header {
-  height: 140px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  box-shadow: 0 4px 20px -12px var(--color-text);
+  padding: 6px 12px;
 }
 .head__wrapper {
   display: flex;

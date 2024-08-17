@@ -1,5 +1,9 @@
+<script lang="ts" setup>
+import HeroPicComponent from '@/components/HeroPicComponent.vue'
+</script>
+
 <template>
   <main>
-    <p>Hier kommt mal Inhalt hin!</p>
+    <HeroPicComponent />
   </main>
 </template>
