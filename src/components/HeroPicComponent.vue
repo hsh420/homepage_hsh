@@ -59,7 +59,7 @@ import '@/assets/base.css'
 }
 .hero__arrow {
   font-size: 1.5rem;
-  animation: bounce 1s linear infinite;
+  animation: bounce 2s linear infinite;
 }
 .hero__action {
   position: absolute;
@@ -73,13 +73,13 @@ import '@/assets/base.css'
 }
 
 @keyframes bounce {
-  20% {
+  25% {
     transform: translateY(-10px);
   }
-  40% {
+  50% {
     transform: translateY(0);
   }
-  20% {
+  75% {
     transform: translateY(-10px);
   }
 }
