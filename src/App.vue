@@ -7,22 +7,19 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="page__wrapper">
-    <HeaderComponent class="header" />
-    <RouterView class="main" />
-    <FooterComponent class="footer" v-if="route.name !== 'home'" />
+  <HeaderComponent />
+  <div class="content">
+    <RouterView />
   </div>
+  <FooterComponent v-if="route.name !== 'home'" />
 </template>
 
 <style scoped>
 .page__wrapper {
   min-height: 100vh;
 }
-.main {
+.content {
+  height: 100%;
   padding-top: 132px;
-}
-.footer {
-  height: 100px;
-  margin-top: -100px;
 }
 </style>
