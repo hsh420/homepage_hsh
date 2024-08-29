@@ -7,10 +7,11 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="page__wrapper"></div>
-  <HeaderComponent />
-  <RouterView class="main" />
-  <FooterComponent class="footer" v-if="route.name !== 'home'" />
+  <div class="page__wrapper">
+    <HeaderComponent class="header" />
+    <RouterView class="main" />
+    <FooterComponent class="footer" v-if="route.name !== 'home'" />
+  </div>
 </template>
 
 <style scoped>
