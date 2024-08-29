@@ -22,35 +22,22 @@ import '@/assets/base.css'
 
 <style>
 .hero__wrapper {
-  display: flex;
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 20px;
-  overflow-y: hidden; */
+  height: calc(100vh - 140px);
+  overflow: hidden;
 }
 .hero__pic-container {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: auto;
+  height: 250px;
   overflow: hidden;
 }
 .hero__pic-image {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  right: -10px;
   width: 100%;
   height: 300px;
   object-fit: cover;
-  object-position: -10px 20px;
 }
 .hero__text {
-  position: absolute;
-  top: 160px;
-  left: 0;
-  right: 0;
   text-align: center;
   width: 100%;
 }
