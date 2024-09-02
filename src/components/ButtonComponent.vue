@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import '@/assets/base.css'
+import { RouterLink } from 'vue-router'
 const props = defineProps<{
   className: string
   link?: string
@@ -10,7 +11,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <a :class="'base ' + className + ' ' + size" :href="link" v-if="link">{{ text }}</a>
+  <RouterLink v-if="link" :to="{ name: link }" :class="'base ' + className + ' ' + size">{{
+    text
+  }}</RouterLink>
   <button class="button" v-else v-on:click="method">{{ text }}</button>
 </template>
 
@@ -19,6 +22,7 @@ const props = defineProps<{
   text-decoration: none;
   border-radius: 12px;
   padding: 12px;
+  cursor: pointer;
 }
 .primary {
   color: var(--color-text);
