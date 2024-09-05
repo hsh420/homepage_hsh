@@ -91,9 +91,9 @@ const skills = [
         durch einen zertifizierten Kurs.
       </p>
     </div>
-    <div class="flex-center">
-      <p class="text">...die Fähigkeiten in Aktion sehen?</p>
-      <ButtonComponent className="accent" link="experience" text="Zu den Referenzen" />
+    <div class="nav">
+      <p class="text short">...die Fähigkeiten in Aktion sehen?</p>
+      <ButtonComponent className="accent" link="references" text="Zu den Referenzen" />
     </div>
   </article>
 </template>
@@ -161,7 +161,13 @@ const skills = [
   display: inline-block;
   margin-right: 14px;
 }
-
+.nav {
+  display: flex;
+  padding: 12px 6px;
+}
+.short {
+  max-width: 50%;
+}
 @keyframes buildUp {
   0% {
     background-color: #fff;
