@@ -29,6 +29,10 @@ const routes = [
     text: 'Fähigkeiten'
   },
   {
+    name: 'references',
+    text: 'Referenzen'
+  },
+  {
     name: 'experience',
     text: 'Berufserfahrung'
   },

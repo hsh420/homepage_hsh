@@ -26,7 +26,7 @@ const cards = [
     text: 'Eine kleine Auswahl meiner privaten und beruflichen Projekte, die ich bisher - alleine und im Team - begleiten durfte.',
     iconSrc: previewIcon,
     alt: 'Preview Icon',
-    routerLink: 'experience'
+    routerLink: 'references'
   },
   {
     headline: 'Kontakt',
