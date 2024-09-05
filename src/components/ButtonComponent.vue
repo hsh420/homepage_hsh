@@ -14,7 +14,7 @@ const props = defineProps<{
   <RouterLink v-if="link" :to="{ name: link }" :class="'base ' + className + ' ' + size">{{
     text
   }}</RouterLink>
-  <button class="button" v-else v-on:click="method">{{ text }}</button>
+  <button :class="'base ' + className + ' ' + size" v-else v-on:click="method">{{ text }}</button>
 </template>
 
 <style>
@@ -23,6 +23,7 @@ const props = defineProps<{
   border-radius: 12px;
   padding: 12px;
   cursor: pointer;
+  background-color: var(--color-background);
 }
 .primary {
   color: var(--color-text);

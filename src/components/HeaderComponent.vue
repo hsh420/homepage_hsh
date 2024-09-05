@@ -93,10 +93,9 @@ const routes = [
 <style scoped>
 header {
   position: fixed;
-  left: 0;
-  right: 0;
   top: 0;
   z-index: 99;
+  width: 100vw;
 }
 .head__wrapper {
   display: flex;
