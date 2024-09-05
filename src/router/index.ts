@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/experience',
       name: 'experience',
-      component: () => import('../views/HomeView.vue')
+      component: () => import('../views/ExperienceView.vue')
     },
     {
       path: '/contact',
