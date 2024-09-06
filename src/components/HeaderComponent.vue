@@ -37,6 +37,10 @@ const routes = [
     text: 'Berufserfahrung'
   },
   {
+    name: 'contact',
+    text: 'Kontakt'
+  },
+  {
     name: 'datenschutz',
     text: 'Datenschutz'
   },
