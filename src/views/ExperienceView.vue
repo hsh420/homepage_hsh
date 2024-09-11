@@ -2,15 +2,26 @@
 import PreviewComponent from '@/components/PreviewComponent.vue'
 import ScreenKiezKomplizen from '@/assets/images/Screen_KiezKomplizen.png'
 import MobileKiezKomplizen from '@/assets/images/Mobile_KiezKomplizen.png'
+import ScreenCodingBootcamps from '@/assets/images/Screen_CodingBootcamps.png'
+import MobileCodingBootcamps from '@/assets/images/Mobile_CodingBootcamps.png'
+import ScreenFerberDigital from '@/assets/images/Screen_FerberDigital.png'
+import MobileFerberDigital from '@/assets/images/Mobile_FerberDigital.png'
+import EngineerIcon from '@/assets/icons/engineering_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 </script>
 
 <template>
   <article class="text-wrapper">
-    <h1 class="headline">Berufserfahrung</h1>
+    <div class="flex-center">
+      <span v-html="EngineerIcon" class="icon"></span>
+      <h1 class="headline">Berufserfahrung</h1>
+    </div>
     <section>
       <header>
         <div class="experience-container">
-          <h4 class="experience__heading">Frontend-Developer, ComLine GmbH, Flensburg</h4>
+          <h4 class="experience__heading">
+            Frontend-Developer<br />
+            ComLine GmbH, Flensburg
+          </h4>
           <p class="experience__subheading">seit Oktober 2024</p>
         </div>
       </header>
@@ -22,20 +33,31 @@ import MobileKiezKomplizen from '@/assets/images/Mobile_KiezKomplizen.png'
       <header>
         <div class="experience-container">
           <h4 class="experience__heading">
-            Web-Anwendungsentwickler, Coding Bootcamps Europe, Berlin
+            Web-Anwendungsentwickler<br />
+            Coding Bootcamps Europe, Berlin
           </h4>
           <p class="experience__subheading">März 2024 bis September 2024</p>
         </div>
       </header>
-      <p class="block">
+      <p class="block space">
         Front- und Backend Development u.a. mit AstroJS, Vue, nodeJS, ExpressJS; Testing u.a. mit
         Postman, Cypress; Build- und Deployment-Prozesse u.a. via Netlify
       </p>
+      <PreviewComponent
+        :imgScreenSrc="ScreenCodingBootcamps"
+        :imgMobileSrc="MobileCodingBootcamps"
+        headline="Homepage Coding Bootcamps Europe"
+        websiteLink="https://coding-bootcamps.eu/"
+        :bulletpoints="['mit AstroJS entwickelt', 'Nutzung von Tailwind-CSS']"
+      />
     </section>
     <section>
       <header>
         <div class="experience-container">
-          <h4 class="experience__heading">Trainee, Coding Bootcamps Europe, Berlin</h4>
+          <h4 class="experience__heading">
+            Trainee Web-Anwendungsentwickler<br />
+            Coding Bootcamps Europe, Berlin
+          </h4>
           <p class="experience__subheading">Oktober 2023 bis Februar 2024</p>
         </div>
       </header>
@@ -54,20 +76,30 @@ import MobileKiezKomplizen from '@/assets/images/Mobile_KiezKomplizen.png'
     <section>
       <header>
         <div class="experience-container">
-          <h4 class="experience__heading">Frontend-Developer bei Ferber Digital GmbH, Flensburg</h4>
+          <h4 class="experience__heading">
+            Frontend-Developer<br />
+            Ferber Digital GmbH, Flensburg
+          </h4>
           <p class="experience__subheading">Juli 2022 bis August 2023</p>
         </div>
       </header>
-      <p class="block">
+      <p class="block space">
         Frontend Development unter Verwendung von HTML, CSS(SCSS), TypeScript / JavaScript mit
         Angular 9+ (inkl. Storybook UI / UX Systemen) im agilen Arbeitsumfeld (SCRUM/KANBAN)
       </p>
+      <PreviewComponent
+        :imgScreenSrc="ScreenFerberDigital"
+        :imgMobileSrc="MobileFerberDigital"
+        headline="Zeiterfassung Ferber Digital"
+        :bulletpoints="['Angular-Anwendung', 'Firebase als Datenbank', 'O-Auth bei Login']"
+      />
     </section>
     <section>
       <header>
         <div class="experience-container">
           <h4 class="experience__heading">
-            Wissenschaftlicher Mitarbeiter bei Prof. Dr. Heiner Dunckel, MdL a.D., Flensburg
+            Wissenschaftlicher Mitarbeiter<br />
+            Prof. Dr. Heiner Dunckel (MdL a.D.), Flensburg
           </h4>
           <p class="experience__subheading">August 2018 bis Juni 2022</p>
         </div>
@@ -80,7 +112,10 @@ import MobileKiezKomplizen from '@/assets/images/Mobile_KiezKomplizen.png'
     <section>
       <header>
         <div class="experience-container">
-          <h4 class="experience__heading">Campaigner, Küste gegen Plastik e.V., Niebüll</h4>
+          <h4 class="experience__heading">
+            Campaigner<br />
+            Küste gegen Plastik e.V., Niebüll
+          </h4>
           <p class="experience__subheading">April 2021 bis März 2022</p>
         </div>
       </header>
@@ -94,6 +129,15 @@ import MobileKiezKomplizen from '@/assets/images/Mobile_KiezKomplizen.png'
 </template>
 
 <style scoped>
+.flex-center {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.icon {
+  margin-right: 6px;
+  line-height: 1;
+}
 .headline {
   text-align: center;
   font-size: 2rem;
@@ -107,20 +151,30 @@ import MobileKiezKomplizen from '@/assets/images/Mobile_KiezKomplizen.png'
 }
 .experience__heading {
   font-weight: 600;
+  font-size: 0.9rem;
 }
 .experience__subheading {
   font-style: italic;
+  margin: 0 auto;
+  padding-top: 6px;
+  max-width: 60ch;
 }
 section {
-  margin-bottom: 12px;
+  margin-bottom: 36px;
   padding-bottom: 12px;
-  border-bottom: 2px dashed var(--color-text);
 }
-section:last-child {
-  border-bottom: none;
+section::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 150px);
+  width: 300px;
+  border-bottom: 0.5px dotted var(--color-text);
+  margin-top: 24px;
 }
 .block {
   text-align: justify;
+  max-width: 60ch;
+  margin: 0 auto;
 }
 .space {
   margin-bottom: 12px;

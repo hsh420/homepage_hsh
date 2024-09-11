@@ -41,10 +41,6 @@ const routes = [
     text: 'Kontakt'
   },
   {
-    name: 'datenschutz',
-    text: 'Datenschutz'
-  },
-  {
     name: 'impressum',
     text: 'Impressum'
   }
