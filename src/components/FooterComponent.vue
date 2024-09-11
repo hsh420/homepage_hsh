@@ -19,6 +19,7 @@ import { RouterLink } from 'vue-router'
 .footer {
   display: flex;
   justify-content: space-between;
+  height: 40px;
   padding: 12px 24px;
   box-shadow: 0 4px 20px 0px var(--color-text);
   margin-top: 12px;
