@@ -6,11 +6,15 @@ import HendrikSH from '@/assets/images/HendrikSH_freigestellt.png'
 import HomeIcon from '@/assets/icons/home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 import MailIcon from '@/assets/icons/mail_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 import PhoneIcon from '@/assets/icons/phone_iphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
+import ContactIcon from '@/assets/icons/contact_mail_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 </script>
 
 <template>
   <article>
-    <h1>Kontakt</h1>
+    <div class="flex-center">
+      <span v-html="ContactIcon" class="icon"></span>
+      <h1 class="headline">Kontakt</h1>
+    </div>
     <div class="contact-container">
       <div class="address-container">
         <div>
@@ -68,6 +72,17 @@ import PhoneIcon from '@/assets/icons/phone_iphone_24dp_E8EAED_FILL0_wght400_GRA
 </template>
 
 <style scoped>
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  margin-right: 6px;
+  line-height: 1.6;
+}
+.headline {
+  line-height: 1.6;
+}
 .icon-desc {
   text-align: center;
 }

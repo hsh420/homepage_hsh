@@ -75,11 +75,12 @@ import MobileFerberDigital from '@/assets/images/Mobile_FerberDigital.png'
   align-items: center;
 }
 .icon {
-  line-height: 1;
+  line-height: 1.6;
   margin-right: 6px;
 }
 .title {
   font-size: 2rem;
+  line-height: 1.6;
 }
 .preview-section {
   padding: 36px 0;

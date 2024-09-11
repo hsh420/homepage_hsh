@@ -1,14 +1,13 @@
 <script lang="ts" setup>
 import HendrikSH from '@/assets/images/HendrikSH_freigestellt.png'
 import ButtonComponent from './ButtonComponent.vue'
+import WavingHandIcon from '@/assets/icons/waving_hand_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 import '@/assets/base.css'
 </script>
 
 <template>
   <div class="hero__wrapper">
-    <div class="hero__pic-container">
-      <img class="hero__pic-image" :src="HendrikSH" alt="Porträt Hendrik Schwind-Hansen" />
-    </div>
+    <span v-html="WavingHandIcon" class="hero__icon"></span>
     <div class="hero__text">
       <h1>Willkommen!</h1>
       <p>Egal ob einfache Homepage oder komplexe Webanwendung: Let's get things done!</p>
@@ -17,13 +16,22 @@ import '@/assets/base.css'
     <div class="hero__action">
       <ButtonComponent link="overview" text="Jetzt mehr erfahren!" className="accent" size="xl" />
     </div>
+    <div class="hero__pic-container">
+      <img class="hero__pic-image" :src="HendrikSH" alt="Porträt Hendrik Schwind-Hansen" />
+    </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .hero__wrapper {
-  height: calc(100vh - 140px);
+  height: calc(100vh - 144px);
   overflow: hidden;
+}
+.hero__icon {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+  animation: shake 4s ease-in-out infinite;
 }
 .hero__pic-container {
   position: absolute;
@@ -46,7 +54,7 @@ import '@/assets/base.css'
 }
 .hero__arrow {
   font-size: 1.5rem;
-  animation: bounce 2s linear infinite;
+  animation: bounce 4s linear infinite;
 }
 .hero__action {
   display: flex;
@@ -62,6 +70,24 @@ import '@/assets/base.css'
   }
   75% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .hero__icon {
+    margin-top: 60px;
   }
 }
 </style>

@@ -34,14 +34,14 @@ const cards = [
     text: 'Chronologische Darstellung meiner bisheringen beruflichen Stationen mit Auflistung der jeweiligen Tätigkeiten / Technologien.',
     iconSrc: engineerIcon,
     alt: 'Engineer Icon',
-    routerLink: 'references'
+    routerLink: 'experience'
   },
   {
     headline: 'Kontakt',
     text: 'Alle Kontaktmöglichkeiten auf einen Blick: von Social-Media über Telefon bis hin zur Adresse für analoges Mailing. ;-)',
-    iconSrc: previewIcon,
+    iconSrc: contactIcon,
     alt: 'Preview Icon',
-    routerLink: 'experience'
+    routerLink: 'contact'
   }
 ]
 </script>

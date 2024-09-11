@@ -80,6 +80,7 @@ import HendrikUrlaub from '@/assets/images/HendrikUrlaub.jpeg'
 }
 .icon {
   margin-right: 6px;
+  line-height: 1.6;
 }
 h1 {
   text-align: center;
