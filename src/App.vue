@@ -20,6 +20,6 @@ const route = useRoute()
 }
 .content {
   height: 100%;
-  padding-top: 132px;
+  padding-top: 100px;
 }
 </style>

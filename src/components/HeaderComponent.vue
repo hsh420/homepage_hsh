@@ -56,7 +56,7 @@ const routes = [
     <div class="head__wrapper">
       <AtomAnimationComponent />
       <div>
-        <h2 class="head__title">H. Schwind-Hansen</h2>
+        <h2 class="head__title">Hendrik Schwind-Hansen</h2>
         <h3 class="head__subtitle">Web-Development 🚀</h3>
       </div>
       <div>
@@ -109,13 +109,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  height: 80px;
   background-color: var(--color-background);
   box-shadow: 0 4px 20px -12px var(--color-text);
   padding: 6px 12px;
 }
 .head__title {
-  width: 155px;
+  width: 205px;
 }
 .head__subtitle {
   text-align: center;
@@ -185,7 +185,7 @@ body:has(#navbar-toggle:checked) {
 
 #navbar {
   position: absolute;
-  top: 120px;
+  top: 80px;
   left: 0;
   right: 0;
   background-color: var(--color-background);
