@@ -42,7 +42,7 @@ const skills = [
   <article>
     <div class="flex-center">
       <span class="icon" v-html="codeIcon"></span>
-      <h1>Fähigkeiten</h1>
+      <h1 class="headline">Fähigkeiten</h1>
     </div>
     <div :class="placeholder">
       <div>
@@ -62,7 +62,7 @@ const skills = [
         />
       </div>
     </div>
-    <div class="flex-center">
+    <div class="text-container">
       <p class="text">
         ...ausgehend von diesem Basis-Wissen bringe ich umfangreiche Kenntnisse hinsichtlich der
         Arbeit mit modernen Frameworks mit. Erfahrungen habe ich dabei insbesondere mit Angular, Vue
@@ -75,14 +75,14 @@ const skills = [
         <span v-for="skill of skills" class="skill">{{ skill }}</span>
       </div>
     </div>
-    <div class="flex-center">
+    <div class="text-container">
       <p class="text">
         Um meinen Code noch robuster zu gestalten, verwende ich - wenn möglich - TypeScript. Die
         Anbindung von Datenbanken via RESTful API, die Versionierung des Codes mit Git und GitHub
         und auch die Qualitätskontrolle durch Unit- sowie E2E-Testing runden meine Arbeit ab.
       </p>
     </div>
-    <div class="flex-center">
+    <div class="text-container">
       <p class="text">
         Zuletzt habe ich nunmehr kleine Ausflüge in den Bereich "Backend" vollzogen. Hier habe ich
         mithilfe von nodeJS sowie ExpressJS erste, simple Projekte aufgesetzt; theoretisches Wissen
@@ -98,20 +98,29 @@ const skills = [
   </article>
 </template>
 
-<style>
-.icon {
-  line-height: 0;
-}
+<style scoped>
 .flex-center {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  line-height: 1.6;
+  margin-right: 6px;
+}
+.headline {
+  line-height: 1.6;
+  font-size: 2rem;
+}
+.text-container {
   display: flex;
   justify-content: center;
   gap: 6px;
   align-items: center;
 }
-.flex-center + .flex-center {
+.text-container + .text-container {
   margin-top: 12px;
 }
-.flex-center:nth-child(1) {
+.text-container:nth-child(1) {
   font-size: 1.5rem;
 }
 .placeholder {
