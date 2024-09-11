@@ -4,6 +4,7 @@ import accountIcon from '@/assets/icons/account_circle_24dp_E8EAED_FILL0_wght400
 import codeIcon from '@/assets/icons/code_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 import previewIcon from '@/assets/icons/preview_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 import contactIcon from '@/assets/icons/contact_mail_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
+import engineerIcon from '@/assets/icons/engineering_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg?raw'
 import { RouterLink } from 'vue-router'
 
 const cards = [
@@ -16,7 +17,7 @@ const cards = [
   },
   {
     headline: 'Fähigkeiten',
-    text: 'Kurzer Überblick zu den Technologien, mit denen ich arbeite - mein Techstack im Detail mit entsprechenden Zertifikaten.',
+    text: 'Kurzer Überblick zu den Technologien, mit denen ich arbeite - mein Techstack im Detail mit kurzen Erklärungen.',
     iconSrc: codeIcon,
     alt: 'Code Icon',
     routerLink: 'skills'
@@ -29,11 +30,18 @@ const cards = [
     routerLink: 'references'
   },
   {
+    headline: 'Berufserfahrung',
+    text: 'Chronologische Darstellung meiner bisheringen beruflichen Stationen mit Auflistung der jeweiligen Tätigkeiten / Technologien.',
+    iconSrc: engineerIcon,
+    alt: 'Engineer Icon',
+    routerLink: 'references'
+  },
+  {
     headline: 'Kontakt',
     text: 'Alle Kontaktmöglichkeiten auf einen Blick: von Social-Media über Telefon bis hin zur Adresse für analoges Mailing. ;-)',
-    iconSrc: contactIcon,
-    alt: 'Contact Icon',
-    routerLink: 'contact'
+    iconSrc: previewIcon,
+    alt: 'Preview Icon',
+    routerLink: 'experience'
   }
 ]
 </script>

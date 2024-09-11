@@ -82,9 +82,18 @@ import MobileFerberDigital from '@/assets/images/Mobile_FerberDigital.png'
   font-size: 2rem;
 }
 .preview-section {
-  padding: 24px 0;
-  border-bottom: 1px dashed var(--color-text);
+  padding: 36px 0;
 }
+
+.preview-section::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 150px);
+  width: 300px;
+  border-bottom: 0.5px dotted var(--color-text);
+  margin-top: 24px;
+}
+
 .preview-section:last-child {
   border-bottom: none;
 }
