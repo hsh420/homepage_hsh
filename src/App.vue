@@ -14,8 +14,8 @@ const route = useRoute()
     <div class="content">
       <RouterView />
     </div>
-    <div class="footer">
-      <FooterComponent v-if="route.name !== 'home'" />
+    <div class="footer" v-if="route.name !== 'home'">
+      <FooterComponent />
     </div>
   </div>
 </template>
