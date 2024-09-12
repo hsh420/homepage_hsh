@@ -3,7 +3,5 @@ import HeroPicComponent from '@/components/HeroPicComponent.vue'
 </script>
 
 <template>
-  <main>
-    <HeroPicComponent />
-  </main>
+  <HeroPicComponent />
 </template>
