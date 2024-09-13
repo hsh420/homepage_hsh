@@ -92,7 +92,7 @@ const skills = [
       </p>
     </div>
     <div class="nav">
-      <p class="text short">...die Fähigkeiten in Aktion sehen?</p>
+      <p>...die Fähigkeiten in Aktion sehen?</p>
       <ButtonComponent className="accent" link="references" text="Zu den Referenzen" />
     </div>
   </article>
@@ -101,7 +101,8 @@ const skills = [
 <style scoped>
 .flex-center {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: baseline;
 }
 .icon {
   line-height: 1.6;
@@ -154,9 +155,11 @@ const skills = [
   padding-right: 100%;
   display: inline-block;
   height: 40px;
+  width: 2010px;
   white-space: nowrap;
   animation: ticker 60s linear infinite;
   box-sizing: content-box;
+  font-size: 12px;
 }
 .skill-container:hover {
   animation-play-state: paused;
@@ -172,11 +175,11 @@ const skills = [
 }
 .nav {
   display: flex;
-  padding: 12px 6px;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 12px;
 }
-.short {
-  max-width: 50%;
-}
+
 @keyframes buildUp {
   0% {
     background-color: #fff;
@@ -273,15 +276,29 @@ const skills = [
     color: var(--color-text);
     font-family: 'Ubuntu';
     gap: 12px;
+    max-width: 60ch;
+    margin: 0 auto;
   }
 }
 
 @keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
   100% {
-    transform: translateX(-120%);
+    transform: translateX(-2500px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  @keyframes ticker {
+    100% {
+      transform: translateX(-3000px);
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  @keyframes ticker {
+    100% {
+      transform: translateX(-3300px);
+    }
   }
 }
 </style>

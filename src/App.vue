@@ -25,6 +25,7 @@ const route = useRoute()
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1280px;
 }
 .header {
   height: 80px;

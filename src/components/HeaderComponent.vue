@@ -48,7 +48,7 @@ const routes = [
 </script>
 
 <template>
-  <header>
+  <header class="header">
     <div class="head__wrapper">
       <AtomAnimationComponent />
       <div>
@@ -95,11 +95,12 @@ const routes = [
 </template>
 
 <style scoped>
-header {
+.header {
   position: fixed;
   top: 0;
   z-index: 99;
-  width: 100vw;
+  width: 100%;
+  max-width: 1280px;
 }
 .head__wrapper {
   display: flex;
@@ -109,12 +110,16 @@ header {
   background-color: var(--color-background);
   box-shadow: 0 4px 20px -12px var(--color-text);
   padding: 6px 12px;
+  width: 100%;
 }
 .head__title {
   width: 205px;
+  font-size: 1.1rem;
+  text-align: center;
 }
 .head__subtitle {
   text-align: center;
+  font-size: 1rem;
 }
 .sr-only {
   position: absolute;
@@ -215,5 +220,16 @@ menu {
 .active {
   text-decoration: underline;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .navbar__title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .head__title,
+  .head__subtitle {
+    font-size: 0.7rem;
+  }
 }
 </style>

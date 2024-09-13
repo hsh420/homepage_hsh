@@ -36,16 +36,19 @@ import '@/assets/base.css'
   display: flex;
   justify-content: center;
   animation: shake 4s ease-in-out infinite;
+  margin-top: 12px;
 }
 .hero__pic-container {
   width: 100%;
   height: 250px;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   margin-top: 24px;
   border-bottom: 1px solid var(--color-text);
 }
 .hero__pic-image {
-  width: 100%;
+  width: 300px;
   height: 300px;
   object-fit: cover;
 }
@@ -92,6 +95,19 @@ import '@/assets/base.css'
 @media screen and (min-height: 800px) {
   .hero__icon {
     margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__pic-container {
+    height: 450px;
+    margin-top: 50px;
+  }
+  .hero__pic-image {
+    height: 550px;
+    width: 500px;
+  }
+  .hero__icon {
+    margin-bottom: 12px;
   }
 }
 </style>

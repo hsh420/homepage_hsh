@@ -20,7 +20,7 @@ import ContactIcon from '@/assets/icons/contact_mail_24dp_E8EAED_FILL0_wght400_G
         <div>
           <address>
             <div class="flex">
-              <span v-html="HomeIcon" class="icon"></span>
+              <span v-html="HomeIcon" class="first-icon"></span>
               <p>
                 Hendrik Schwind-Hansen
                 <br />
@@ -43,7 +43,7 @@ import ContactIcon from '@/assets/icons/contact_mail_24dp_E8EAED_FILL0_wght400_G
           <img :src="HendrikSH" alt="Porträt Hendrik Schwind-Hansen" class="pic" />
         </div>
       </div>
-      <p>...follow me on:</p>
+      <p class="follow">...follow me on:</p>
       <div class="icon-container">
         <div class="column">
           <a href="https://github.com/hsh420" target="_blank" class="icon-link"
@@ -61,7 +61,7 @@ import ContactIcon from '@/assets/icons/contact_mail_24dp_E8EAED_FILL0_wght400_G
           <span class="icon-desc">LinkedIn</span>
         </div>
         <div class="column">
-          <a href="https://github.com/hsh420" target="_blank" class="icon-link"
+          <a href="https://www.instagram.com/schwindhansen/" target="_blank" class="icon-link"
             ><span v-html="InstagramIcon"></span
           ></a>
           <span class="icon-desc">Instagram</span>
@@ -74,12 +74,23 @@ import ContactIcon from '@/assets/icons/contact_mail_24dp_E8EAED_FILL0_wght400_G
 <style scoped>
 .flex-center {
   display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.flex {
+  display: flex;
   align-items: center;
+  gap: 12px;
+}
+.first-icon {
+  align-self: flex-start;
+  padding-top: 5px;
 }
 .icon {
   margin-right: 6px;
   line-height: 1.6;
 }
+
 .headline {
   line-height: 1.6;
 }
@@ -89,10 +100,7 @@ import ContactIcon from '@/assets/icons/contact_mail_24dp_E8EAED_FILL0_wght400_G
 .column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-.flex {
-  display: flex;
+  align-items: center;
   gap: 12px;
 }
 .flex + .flex {
@@ -105,19 +113,19 @@ h1 {
 .contact-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 100%;
   padding: 12px 12px;
   overflow: hidden;
 }
-
 .address-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 375px;
 }
-
+.follow {
+  padding: 24px 0;
+  text-align: center;
+}
 .link {
   text-decoration: none;
   color: var(--color-text);
@@ -148,5 +156,10 @@ h1 {
 
 .icon-container > a:hover {
   box-shadow: 0 0 10px 0 var(--color-text);
+}
+@media screen and (min-width: 768px) {
+  .pic {
+    width: 300px;
+  }
 }
 </style>

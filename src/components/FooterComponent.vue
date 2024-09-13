@@ -16,6 +16,9 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <style scoped>
+footer {
+  overflow: hidden;
+}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -23,6 +26,8 @@ import { RouterLink } from 'vue-router'
   padding: 12px 24px;
   box-shadow: 0 4px 20px 0px var(--color-text);
   margin-top: 12px;
+  max-width: 1280px;
+  font-size: 1rem;
 }
 .link {
   color: var(--color-text);

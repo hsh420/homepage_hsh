@@ -98,4 +98,29 @@ const props = defineProps<{
   align-items: center;
   text-align: start;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    width: 600px;
+    height: 360px;
+  }
+  .screen {
+    width: 500px;
+    height: 300px;
+  }
+  .mobile {
+    width: 160px;
+    height: 280px;
+  }
+  .screenImg {
+    width: 500px;
+    height: 300px;
+  }
+  .mobileImg {
+    width: 160px;
+    height: 280px;
+  }
+  .cta-container {
+    width: 600px;
+  }
+}
 </style>

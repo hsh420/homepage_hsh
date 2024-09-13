@@ -147,15 +147,17 @@ import EngineerIcon from '@/assets/icons/engineering_24dp_E8EAED_FILL0_wght400_G
   margin: 12px 12px;
 }
 .experience-container {
-  margin-bottom: 12px;
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 12px 0;
 }
 .experience__heading {
   font-weight: 600;
   font-size: 0.9rem;
+  max-width: 60ch;
 }
 .experience__subheading {
   font-style: italic;
-  margin: 0 auto;
   padding-top: 6px;
   max-width: 60ch;
 }
@@ -175,8 +177,14 @@ section::after {
   text-align: justify;
   max-width: 60ch;
   margin: 0 auto;
+  padding: 12px 0;
 }
 .space {
   margin-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .experience__heading {
+    font-size: 1.5rem;
+  }
 }
 </style>

@@ -63,4 +63,14 @@ body {
 .text {
   padding: 0 12px;
   max-width: 60ch;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 34px !important;
+  }
 }
