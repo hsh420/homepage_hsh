@@ -72,7 +72,7 @@ import MobileFerberDigital from '@/assets/images/Mobile_FerberDigital.png'
 .flex-center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 .icon {
   line-height: 1.6;

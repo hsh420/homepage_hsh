@@ -76,7 +76,7 @@ import HendrikUrlaub from '@/assets/images/HendrikUrlaub.jpeg'
 .flex-center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 .icon {
   margin-right: 6px;
@@ -109,6 +109,8 @@ h1 {
 }
 .breaker {
   padding: 12px 12px;
+  margin: 0 auto;
+  max-width: 60ch;
 }
 .cta {
   display: flex;
@@ -121,6 +123,8 @@ h1 {
 }
 .education {
   padding: 12px 12px;
+  max-width: 60ch;
+  margin: 0 auto;
 }
 .education > h3 {
   text-align: center;
@@ -131,5 +135,15 @@ h1 {
 }
 .date {
   font-style: italic;
+}
+
+@media screen and (min-width: 769px) {
+  .education > h3 {
+    font-size: 2.2rem;
+  }
+  .img {
+    width: 300px;
+    height: 300px;
+  }
 }
 </style>
